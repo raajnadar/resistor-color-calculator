@@ -1,4 +1,4 @@
-# Resistor Color Code
+# Resistor Color Code Calculator
 
 Having hard time to get the value of a resistor? Why waste you time by calculating it let this web application do the hard work for you.
 

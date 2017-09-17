@@ -1,4 +1,73 @@
 body {
-    margin: 0px;
-    background-color: #ddd;
+   margin: 0px;
+   background-color: #ddd;
+   font-family: sans-serif;
+   color: #808080;
+   line-height: 1.6em;
+}
+
+a {
+   color: #5ca5cc;
+   text-decoration: none;
+   font-weight: bold;
+}
+
+.container {
+   max-width: 90%;
+   margin: 20px auto;
+}
+
+.card {
+   background-color: #fff;
+   padding: 18px;
+   border-radius: 8px;
+   box-shadow: 4px 4px 6px 0px rgba(0,0,0,.12);
+}
+
+.card div p:last-child {
+   margin: 0px;
+}
+
+.card-title {
+   border-bottom: 2px solid #ddd;
+   padding-bottom: 8px;
+   margin-bottom: 20px;
+}
+
+/* form styling */
+.form-child {
+   flex: 1;
+   display: block;
+   text-align: center;
+}
+
+.form-element {
+   outline: none;
+   border: none;
+   border-bottom: 2px solid #ddd;
+   padding: 6px 0px;
+   transition: all .4s ease-in-out;
+   width: 90%;
+}
+
+.form-element:focus {
+   border-bottom: 2px solid #808080;
+}
+
+#result {
+   text-align: center;
+   padding: 20px 0px 0px 0px;
+}
+
+@media only screen and (min-width: 426px) {
+   .form-group {
+      display: flex;
+   }
+}
+
+@media only screen and (max-width: 425px) {
+   .form-element {
+      width: 100%;
+      margin-bottom: 10px;
+   }
 }

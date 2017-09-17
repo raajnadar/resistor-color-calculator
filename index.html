@@ -1,12 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Resistor Color Code</title>
-    <link rel="stylesheet" href="./css/style.css">
-</head>
-<body>
-    
-    <script type="text/javascript" src="./js/main.js"></script>
-</body>
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Resistor Color Code Calculator</title>
+      <link rel="stylesheet" href="./css/style.css">
+   </head>
+   <body>
+
+      <div class="container">
+         <div class="card">
+            <div class="card-title">About this project</div>
+            <div>
+               <p>If you are electronics geek sometimes it is hard to remember the value of the resistor. Instead of manually calculating or using a multimeter let this website do the heavy lifting for you. Currently it only supports 4 band resistor color 5 &amp; 6 band will be added soon.</p>
+               <p>Just enter the correct values in the correct field and hit the "Get value" button and sit back and have a cup of tea!</p>
+            </div>
+         </div>
+      </div>
+
+      <div class="container">
+         <div class="card">
+            <div class="card-title">Resistor Color Code Calculator (4 band resistor)</div>
+            <form action="" method="post" id="getValue">
+               <div class="form-group">
+                  <div class="form-child">
+                     <input type="text" class="form-element" placeholder="First Color">
+                  </div>
+                  <div class="form-child">
+                     <input type="text" class="form-element" placeholder="Second Color">
+                  </div>
+                  <div class="form-child">
+                     <input type="text" class="form-element" placeholder="Third Color">
+                  </div>
+                  <div class="form-child">
+                     <input type="text" class="form-element" placeholder="Fourth Color">
+                  </div>
+               </div>
+               <div id="result">0 Ohms</div>
+            </form>
+         </div>
+      </div>
+
+      <div class="container">
+         <div class="card">
+            <div class="card-title">More information</div>
+            <div>
+               <p>Found any bugs in this project? It will be great if you raise an issue on the <a href="https://github.com/RaajNadar/resistor-color-code/issues">GitHub issue</a>.</p>
+               <p>If you are interested in improving this project fork this project and put up a pull request. If this project helped you or you liked the project please leave a star on the <a href="https://github.com/RaajNadar/resistor-color-code">GitHub repository</a></p>
+            </div>
+         </div>
+      </div>
+
+      <div class="container">
+         <footer class="card">
+            Designed and developed by <a href="https://facebook.com/RaajNadar">Rajendran Nadar</a>
+         </footer>
+      </div>
+
+      <script type="text/javascript" src="./js/jquery.min.js"></script>
+      <script type="text/javascript" src="./js/main.js"></script>
+   </body>
 </html>
