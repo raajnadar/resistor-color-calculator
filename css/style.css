@@ -37,40 +37,84 @@ a {
    margin-bottom: 20px;
 }
 
-/* form styling */
-.form-child {
+/* Btn styling */
+.group {
+   margin-bottom: 20px;   
+}
+
+.child {
    flex: 1;
    display: block;
    text-align: center;
 }
 
-.form-element {
+.btn {
    outline: none;
    border: none;
-   border-bottom: 2px solid #ddd;
-   padding: 6px 0px;
-   transition: all .4s ease-in-out;
-   width: 90%;
+   padding: 10px 20px;
+   cursor: pointer;
+   background-color: #eee;
+   color: #7b7b7b;
+   width: 150px;
+   box-shadow: 4px 4px 6px 0px rgba(0,0,0,.16);
 }
 
-.form-element:focus {
-   border-bottom: 2px solid #808080;
+.btn-container {
+   text-align: center;
+}
+
+.btn-dropdown {
+   padding: 0px;
+   margin: 0px;
+   list-style: none;
+   background-color: #fff;
+   position: absolute;
+   left: 0px;
+   top: 30px;
+   box-shadow: 4px 4px 6px 0px rgba(0,0,0,.16);
+   min-width: 200px;
+   border: 1px solid #ddd;
+   text-align: initial;
+   max-height: 210px;
+   overflow: auto;
+   display: none;
+   z-index: 100;
+}
+
+.btn-dropdown li {
+   padding: 6px;
+   margin: 0px;
+   border-bottom: 1px solid #ddd;
+   cursor: pointer;
+}
+
+.btn-dropdown li:hover {
+   background-color: #ddd;
+}
+
+.btn-dropdown li:last-child {
+   border-bottom: none;
+}
+
+.dropdown {
+   position: relative;
+   display: inline;
 }
 
 #result {
    text-align: center;
-   padding: 20px 0px 0px 0px;
+   padding: 10px 0px 0px 0px;
 }
 
 @media only screen and (min-width: 426px) {
-   .form-group {
+   .group {
       display: flex;
+      align-items: center;
    }
 }
 
 @media only screen and (max-width: 425px) {
-   .form-element {
-      width: 100%;
-      margin-bottom: 10px;
+   .btn {
+      margin-bottom: 20px;
    }
 }

@@ -21,23 +21,70 @@
       <div class="container">
          <div class="card">
             <div class="card-title">Resistor Color Code Calculator (4 band resistor)</div>
-            <form action="" method="post" id="getValue">
-               <div class="form-group">
-                  <div class="form-child">
-                     <input type="text" class="form-element" placeholder="First Color">
-                  </div>
-                  <div class="form-child">
-                     <input type="text" class="form-element" placeholder="Second Color">
-                  </div>
-                  <div class="form-child">
-                     <input type="text" class="form-element" placeholder="Third Color">
-                  </div>
-                  <div class="form-child">
-                     <input type="text" class="form-element" placeholder="Fourth Color">
+            <div class="group">
+               <div class="child">
+                  <div class="dropdown">
+                     <button class="btn first">First Color</button>
+                     <ul class="btn-dropdown">
+                        <li>Black</li>
+                        <li>Brown</li>
+                        <li>Red</li>
+                        <li>Orange</li>
+                        <li>Yellow</li>
+                        <li>Green</li>
+                        <li>Blue</li>
+                        <li>Violet</li>
+                        <li>Grey</li>
+                        <li>White</li>
+                     </ul>
                   </div>
                </div>
-               <div id="result">0 Ohms</div>
-            </form>
+               <div class="child">
+                  <div class="dropdown">
+                     <button class="btn second">Second Color</button>
+                     <ul class="btn-dropdown">
+                        <li>Black</li>
+                        <li>Brown</li>
+                        <li>Red</li>
+                        <li>Orange</li>
+                        <li>Yellow</li>
+                        <li>Green</li>
+                        <li>Blue</li>
+                        <li>Violet</li>
+                        <li>Grey</li>
+                        <li>White</li>
+                     </ul>
+                  </div>
+               </div>
+               <div class="child">
+                  <div class="dropdown">
+                     <button class="btn third">Third Color</button>
+                     <ul class="btn-dropdown">
+                        <li>Black</li>
+                        <li>Brown</li>
+                        <li>Red</li>
+                        <li>Orange</li>
+                        <li>Yellow</li>
+                        <li>Green</li>
+                        <li>Blue</li>
+                        <li>Violet</li>
+                        <li>Grey</li>
+                        <li>White</li>
+                     </ul>
+                  </div>
+               </div>
+               <div class="child">
+                  <div class="dropdown">
+                     <button class="btn fourth">Fourth Color</button>
+                     <ul class="btn-dropdown">
+                        <li>Silver</li>
+                        <li>Gold</li>
+                        <li>Transparent</li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+            <div id="result"><span id="value">0</span> Ohms <span id="tolerance"></span></div>
          </div>
       </div>
 
