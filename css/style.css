@@ -39,7 +39,7 @@ a {
 
 /* Btn styling */
 .group {
-   margin-bottom: 20px;   
+   flex-wrap: wrap;
 }
 
 .child {
@@ -57,6 +57,8 @@ a {
    color: #7b7b7b;
    width: 150px;
    box-shadow: 4px 4px 6px 0px rgba(0,0,0,.16);
+   font-weight: bold;
+   margin-bottom: 20px;
 }
 
 .btn-container {

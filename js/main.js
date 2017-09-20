@@ -12,7 +12,7 @@ $(window).on('load', function () {
          $(this).css({
             'display': 'none'
          });
-         $(child).removeClass("visible");
+         $(this).removeClass("visible");
       });
 
       if (!child.hasClass("visible")) {
@@ -32,17 +32,37 @@ $(window).on('load', function () {
       var name = $(this).html(), setName = $(this).parent().siblings(), closeDropdown = $(this).parent(), index = $(this).index();
       setName.html(name);
       setName.addClass("valid");
-      setName.css({
-         'background-color': name,
-         'color': '#fff'
-      });
+      
+      if (name === "Yellow" || name === "White" || name === "Transparent") {
+         setName.css({
+            'background-color': name,
+            'color': '#000'
+         });
+      } else {
+         setName.css({
+            'background-color': name,
+            'color': '#fff'
+         });
+      }
       
       if (setName.hasClass('first')) {
          first = index;
       } else if (setName.hasClass('second')) {
          second = index;
-      } else {
+      } else if (setName.hasClass('third')) {
          third = 10 ** index;
+      } else {
+         switch (index) {
+         case 0:
+            fourth = 5;
+            break;
+         case 1:
+            fourth = 10;
+            break;
+         default:
+            fourth = 20;
+            break;
+         }
       }
       
       if ($('.first').hasClass('valid') && $('.second').hasClass('valid')) {
@@ -50,6 +70,21 @@ $(window).on('load', function () {
          
          if ($('.third').hasClass('valid')) {
             resistorValue = resistorValue * third;
+         }
+         
+         if (fourth) {
+            $('#tolerance').html(" - " + fourth + " %");
+         }
+         
+         if (resistorValue >= 1000 && resistorValue <= 999999) {
+            resistorValue = resistorValue / 1000;
+            resistorValue = resistorValue + " K";
+         } else if (resistorValue >= 1000000 && resistorValue <= 999999999) {
+            resistorValue = resistorValue / 1000000;
+            resistorValue = resistorValue + " M";
+         } else if (resistorValue >= 1000000000 && resistorValue <= 99999999999) {
+            resistorValue = resistorValue / 1000000000;
+            resistorValue = resistorValue + " G";
          }
          
          $('#value').html(resistorValue);
