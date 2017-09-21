@@ -61,10 +61,6 @@ a {
    margin-bottom: 20px;
 }
 
-.btn-container {
-   text-align: center;
-}
-
 .btn-dropdown {
    padding: 0px;
    margin: 0px;
@@ -103,11 +99,20 @@ a {
    display: inline;
 }
 
+.disabled {
+   background-color: #ddd;
+}
+
+.disabled:hover {
+   cursor: not-allowed;
+}
+
 #result {
    text-align: center;
    padding: 10px 0px 0px 0px;
 }
 
+/* responisve styling */
 @media only screen and (min-width: 426px) {
    .group {
       display: flex;
