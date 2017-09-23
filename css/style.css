@@ -24,7 +24,7 @@ a {
    padding: 18px;
    border-radius: 8px;
    border: 1px solid #d4d4d4;
-   box-shadow: 4px 4px 6px 0px rgba(0,0,0,.16);
+   box-shadow: 2px 2px 4px 0px rgba(0,0,0,.18);
 }
 
 .card div p:last-child {
@@ -53,12 +53,17 @@ a {
    border: none;
    padding: 10px 20px;
    cursor: pointer;
-   background-color: #eee;
+   background-color: #e0e0e0;
    color: #7b7b7b;
    width: 150px;
-   box-shadow: 4px 4px 6px 0px rgba(0,0,0,.16);
+   box-shadow: 2px 2px 4px 0px rgba(0,0,0,.18);
    font-weight: bold;
    margin-bottom: 20px;
+   transition: box-shadow .3s ease-in-out;
+}
+
+.btn:hover {
+   box-shadow: 4px 4px 4px 0px rgba(0,0,0,.18);
 }
 
 .btn-dropdown {
@@ -69,7 +74,7 @@ a {
    position: absolute;
    left: 0px;
    top: 30px;
-   box-shadow: 4px 4px 6px 0px rgba(0,0,0,.16);
+   box-shadow: 2px 2px 4px 0px rgba(0,0,0,.18);
    min-width: 200px;
    border: 1px solid #ddd;
    text-align: initial;

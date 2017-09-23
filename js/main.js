@@ -5,35 +5,22 @@ $(window).on('load', function () {
    'use strict';
    var first, second, third, fourth, resistorValue;
 
-   $(".btn").on('click', function () {
-      var child = $(this).siblings();
+   $(document).on('click', function () {
+      $('.dropdown .btn-dropdown').fadeOut();
+   });
 
-      $('.btn-dropdown').each(function () {
-         $(this).css({
-            'display': 'none'
-         });
-         $(this).removeClass("visible");
-      });
-
-      if (!child.hasClass("visible")) {
-         child.css({
-            'display': 'block'
-         });
-         child.addClass("visible");
-      } else {
-         $(child).css({
-            'display': 'none'
-         });
-         $(child).removeClass("visible");
-      }
+   $(".btn").on('click', function (e) {
+      e.stopPropagation();
+      var dropdown = $(this).siblings().fadeToggle();
+      $('.dropdown .btn-dropdown').not(dropdown).fadeOut();
    });
 
    $(".btn-dropdown li").on("click", function () {
-      
+
       if ($(this).hasClass("disabled")) {
-          return false;
+         return false;
       }
-          
+
       var name = $(this).html(), setName = $(this).parent().siblings(), closeDropdown = $(this).parent(), index = $(this).index();
       setName.html(name);
       setName.addClass("valid");
@@ -67,7 +54,7 @@ $(window).on('load', function () {
             default:
                fourth = 20;
                break;
-         }
+                      }
       }
 
       if ($('.first').hasClass('valid') && $('.second').hasClass('valid')) {
@@ -95,10 +82,7 @@ $(window).on('load', function () {
          $('#value').html(resistorValue);
       }
 
-      $(closeDropdown).css({
-         'display': "none"
-      });
-      $(closeDropdown).removeClass("visible");
+      $('.dropdown .btn-dropdown').not(setName).fadeOut();
    });
 
 });
