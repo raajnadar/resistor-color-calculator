@@ -139,6 +139,12 @@ document.onreadystatechange = function () {
 					if (e.target.nodeName === 'LI') {
 						var parent = e.target.parentElement.previousElementSibling;
 						parent.style.backgroundColor = e.target.innerHTML;
+
+						if (e.target.innerHTML === "Yellow" || e.target.innerHTML === "White") {
+							parent.style.color = "black";
+						} else {
+							parent.style.color = "#fff";
+						}
 						parent.classList.add('4-band-set');
 
 						if (parent.classList.contains('first')) {
