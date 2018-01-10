@@ -31,12 +31,12 @@ document.onreadystatechange = function () {
 			}
 		}());
 	}
-	
+
 	/*
 	 *	Get the value to calculate resistance
 	 * @return color calue
 	 */
-	
+
 	function getValue(value) {
 		switch (value) {
 		case "Black":
@@ -61,12 +61,12 @@ document.onreadystatechange = function () {
 			return 9;
 		}
 	}
-	
+
 	/*
 	 *	Calculate tolerance value
 	 * @return tolerance
 	 */
-	
+
 	function getTolerance(tol) {
 		switch (tol) {
 		case "Gold":
@@ -76,6 +76,21 @@ document.onreadystatechange = function () {
 		case "Transparent":
 			return 20;
 		}
+	}
+
+	function convert(value) {
+		if (value >= 1000 && value <= 999999) {
+    	value = value / 1000;
+      value = value + " K";
+   	} else if (value >= 1000000 && value <= 999999999) {
+      value = value / 1000000;
+      value = value + " M";
+   	} else if (value >= 1000000000 && value <= 99999999999) {
+      value = value / 1000000000;
+      value = value + " G";
+   	}
+
+		return value;
 	}
 
 	/*
@@ -129,24 +144,25 @@ document.onreadystatechange = function () {
 						if (parent.classList.contains('first')) {
 							first = getValue(e.target.innerHTML);
 						}
-						
+
 						if (parent.classList.contains('second')) {
 							second = getValue(e.target.innerHTML);
 						}
-						
+
 						if (parent.classList.contains('third')) {
 							third = getValue(e.target.innerHTML);
 						}
-						
+
 						if (parent.classList.contains('fourth')) {
 							fourth = getTolerance(e.target.innerHTML);
 						}
-						
+
 						if (first !== undefined && second !== undefined && third !== undefined) {
 							var addNum = first + '' + second, power = 10**third;
-							resistance = addNum * power;
+							resistance = convert(addNum * power);
+
 							result.innerHTML = resistance;
-							
+
 							if (fourth != undefined) {
 								tolerance.innerHTML = fourth + "%";
 							}
