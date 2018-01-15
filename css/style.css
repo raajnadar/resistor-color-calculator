@@ -2,16 +2,25 @@ body {
    margin: 0px;
    background-color: #ddd;
    font-family: sans-serif;
+   font-size: 1.2em;
    color: #7b7b7b;
    line-height: 1.6em;
-   text-align: justify;
-   font-weight: bold;
+   user-select: none;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0px;
 }
 
 a {
-   color: #5ca5cc;
+   color: #38b5f9;
    text-decoration: none;
    font-weight: bold;
+   transition: all .4s ease-in-out;
+}
+
+a:hover, a:active {
+  color: #2a89bd;
 }
 
 .container {
@@ -24,7 +33,7 @@ a {
    padding: 18px;
    border-radius: 8px;
    border: 1px solid #d4d4d4;
-   box-shadow: 2px 2px 4px 0px rgba(0,0,0,.18);
+   box-shadow: 0 6px 10px 0 rgba(0,0,0,.14),0 1px 12px 0 rgba(0,0,0,.12),0 3px 5px -1px rgba(0,0,0,.2);
 }
 
 .card div p:last-child {
@@ -35,6 +44,7 @@ a {
    border-bottom: 2px solid #ddd;
    padding-bottom: 8px;
    margin-bottom: 20px;
+   font-size: 1.3em;
 }
 
 /* Btn styling */
@@ -59,11 +69,12 @@ a {
    box-shadow: 2px 2px 4px 0px rgba(0,0,0,.18);
    font-weight: bold;
    margin-bottom: 20px;
-   transition: box-shadow .3s ease-in-out;
+   transition: all .3s ease-in-out;
 }
 
-.btn:hover {
-   box-shadow: 4px 4px 4px 0px rgba(0,0,0,.18);
+.btn:active {
+  box-shadow: 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12), 0 2px 4px 1px rgba(0,0,0,.2);
+  background-color: rgba(158,158,158,.4);
 }
 
 .btn-dropdown {
@@ -110,6 +121,10 @@ a {
 
 .disabled:hover {
    cursor: not-allowed;
+}
+
+.mb-10 {
+  margin-bottom: 10px;
 }
 
 #result {

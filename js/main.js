@@ -7,13 +7,13 @@ document.onreadystatechange = function () {
 	 * Fade in and out animation by chrisbuttery
 	 * Github - https://github.com/chrisbuttery
 	 */
-	function fadeIn(el, display) {
+	function fadeIn(el) {
 		el.style.opacity = 0;
-		el.style.display = display || "block";
+		el.style.display = "block";
 
 		(function fade() {
 			var val = parseFloat(el.style.opacity);
-			if (!((val += 0.1) > 1)) {
+			if (!((val += 0.1) >= 1.1)) {
 				el.style.opacity = val;
 				requestAnimationFrame(fade);
 			}
@@ -21,12 +21,13 @@ document.onreadystatechange = function () {
 	}
 
 	function fadeOut(el) {
-		el.style.opacity = 1;
-
 		(function fade() {
-			if ((el.style.opacity -= 0.1) < 0) {
+			var val = parseFloat(el.style.opacity);
+			if ((val -= 0.1) == 0) {
+				el.style.opacity = 0;
 				el.style.display = "none";
 			} else {
+				el.style.opacity = val;
 				requestAnimationFrame(fade);
 			}
 		}());
@@ -138,17 +139,12 @@ document.onreadystatechange = function () {
 				dropDown.addEventListener("click", function (e) {
 					if (e.target.nodeName === 'LI') {
 						var parent = e.target.parentElement.previousElementSibling;
-						parent.style.backgroundColor = e.target.innerHTML;
-
-						if (e.target.innerHTML === "Yellow" || e.target.innerHTML === "White") {
-							parent.style.color = "black";
-						} else {
-							parent.style.color = "#fff";
-						}
-						parent.classList.add('4-band-set');
 
 						if (parent.classList.contains('first')) {
 							first = getValue(e.target.innerHTML);
+							if (first == 0) {
+								return false;
+							}
 						}
 
 						if (parent.classList.contains('second')) {
@@ -162,6 +158,15 @@ document.onreadystatechange = function () {
 						if (parent.classList.contains('fourth')) {
 							fourth = getTolerance(e.target.innerHTML);
 						}
+
+						if (e.target.innerHTML === "Yellow" || e.target.innerHTML === "White") {
+							parent.style.color = "black";
+						} else {
+							parent.style.color = "#fff";
+						}
+						parent.classList.add('4-band-set');
+
+						parent.style.backgroundColor = e.target.innerHTML;
 
 						if (first !== undefined && second !== undefined && third !== undefined) {
 							var addNum = first + '' + second, power = 10**third;
