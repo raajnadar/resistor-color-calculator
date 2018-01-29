@@ -4,13 +4,13 @@ Having a hard time to get the value of a resistor? Why waste your time by calcul
 
 ## Usage
 
-Go to the [web page](https://raajnadar.github.io/resistor-color-code-calculator) select the color in the proper sequence & get the correct value of the resistor that's it. We made it as simple as possible to get the desired output.
+Go to the [web page](https://raajnadar.github.io/resistor-color-calculator) select the color in the proper sequence & get the correct value of the resistor that's it. We made it as simple as possible to get the desired output.
 
 ## Bug Report
 Found any bug? It would be great if you raise an issue on GitHub or you can contribute to this repository.
 
 ## How to contribute?
-Before making a pull request go through the contribution guidelines given [here](https://github.com/raajnadar/resistor-color-code-calculator/blob/master/CONTRIBUTING.md)
+Before making a pull request go through the contribution guidelines given [here](https://github.com/raajnadar/resistor-color-calculator/blob/master/CONTRIBUTING.md)
 
 ## Author
-Project Lead - [Rajendran Nadar](https://facebook.com/raajnadar)
+Project Lead - [Rajendran Nadar](https://raajnadar.github.io)

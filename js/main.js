@@ -159,7 +159,7 @@ document.onreadystatechange = function () {
 							fourth = getTolerance(e.target.innerHTML);
 						}
 
-						if (e.target.innerHTML === "Yellow" || e.target.innerHTML === "White") {
+						if (e.target.innerHTML === "Yellow" || e.target.innerHTML === "White" || e.target.innerHTML === "Transparent") {
 							parent.style.color = "black";
 						} else {
 							parent.style.color = "#fff";
