@@ -16,7 +16,7 @@ Make a pull request only if you meet all the conditions that are stated above.
 
 ### The following coding conventions are mandatory & should be followed.
 
-* This project is built with 3 spaces (Soft tabs for indentation)
+* This project is built with 4 spaces (Soft tabs for indentation)
 * Not everyone on this planet know how to ride a bike, So comment your code properly.
 
 ### The following code conventions are optional

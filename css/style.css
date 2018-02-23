@@ -1,7 +1,7 @@
 body {
    margin: 0px;
    background-color: #ecf0f1;
-   font-family: sans-serif;
+   font-family: "varela round", sans-serif;
    font-size: 1.2em;
    color: #808080;
    line-height: 1.6em;
@@ -24,7 +24,7 @@ a:hover, a:active {
 }
 
 .container {
-   max-width: 90%;
+   max-width: 96%;
    margin: 20px auto;
 }
 
@@ -33,7 +33,7 @@ a:hover, a:active {
    padding: 18px;
    border-radius: 8px;
    border: 1px solid #d4d4d4;
-   box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, .14);
+   box-shadow: 2px 0px 8px 0px rgba(0, 0, 0, .14);
 }
 
 .card div p:last-child {

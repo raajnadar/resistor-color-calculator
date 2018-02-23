@@ -1,4 +1,4 @@
-# Resistor Color Code Calculator
+# Resistor Color Calculator
 
 Having a hard time to get the value of a resistor? Why waste your time by calculating it let this web application do the hard work for you. If this project helped you make sure you leave a star on this repository. **Currently it only supports 4 band resistor color.**
 
