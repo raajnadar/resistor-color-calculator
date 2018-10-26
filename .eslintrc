@@ -1,0 +1,16 @@
+{
+	"extends": ["react-app", "plugin:prettier/recommended"],
+	"env": {
+		"es6": true
+	},
+	"parserOptions": {
+		"ecmaVersion": 8,
+		"sourceType": "module",
+		"ecmaFeatures": {
+			"jsx": true
+		}
+	},
+	"rules": {
+		"no-extra-semi": 1
+	}
+}

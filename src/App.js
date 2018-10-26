@@ -7,7 +7,7 @@ class App extends Component {
 				<p>Hello world</p>
 			</div>
 		)
-  	}
+	}
 }
 
 export default App
