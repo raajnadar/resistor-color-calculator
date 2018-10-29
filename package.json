@@ -5,8 +5,8 @@
 	"homepage": "https://raajnadar.github.io/resistor-color-calculator/",
 	"dependencies": {
 		"@material-ui/core": "^3.5.1",
-		"react": "^16.6.3",
-		"react-dom": "^16.6.3",
+		"react": "16.7.0-alpha.2",
+		"react-dom": "16.7.0-alpha.2",
 		"react-scripts": "2.1.1"
 	},
 	"scripts": {
