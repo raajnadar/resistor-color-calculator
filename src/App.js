@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 import Typography from '@material-ui/core/Typography'
 import Grid from '@material-ui/core/Grid'
@@ -42,7 +42,7 @@ const colors = [
 	'white'
 ]
 
-const tolerance = ['Gold', 'Silver', 'Transparent']
+const toleranceArr = ['Gold', 'Silver', 'Transparent']
 
 function App(props) {
 	const { classes } = props
@@ -59,7 +59,7 @@ function App(props) {
 	const [activeDialog, setActiveDialog] = useState('')
 	const buttonClick = name => {
 		if (name === 'fourth') {
-			setDialogContent(tolerance)
+			setDialogContent(toleranceArr)
 		} else {
 			setDialogContent(colors)
 		}
@@ -95,6 +95,65 @@ function App(props) {
 			setColor(newColor)
 		}
 	}
+
+	const calculator = color => {
+		switch (color) {
+			case 'black':
+				return 0
+			case 'brown':
+				return 1
+			case 'red':
+				return 2
+			case 'orange':
+				return 3
+			case 'yellow':
+				return 4
+			case 'green':
+				return 5
+			case 'blue':
+				return 6
+			case 'violet':
+				return 7
+			case 'grey':
+				return 8
+			case 'white':
+				return 9
+			default:
+				break
+		}
+	}
+
+	const tolerance = color => {
+		switch (color) {
+			case 'Gold':
+				return 5
+			case 'Silver':
+				return 10
+			case 'Transparent':
+				return 20
+			default:
+				break
+		}
+	}
+
+	const [resistor, setResistor] = useState(0)
+	const [toleranceValue, setTolerance] = useState(0)
+	useEffect(() => {
+		if (
+			color.first !== 'First color' &&
+			color.second !== 'Second color' &&
+			color.third !== 'Third color'
+		) {
+			let final =
+				(calculator(color.first) + '' + calculator(color.second)) *
+				10 ** calculator(color.third)
+			setResistor(final)
+		}
+
+		if (color.fourth !== 'Fourth color') {
+			setTolerance(tolerance(color.fourth))
+		}
+	})
 
 	return (
 		<div className={classes.root}>
@@ -182,8 +241,8 @@ function App(props) {
 								</Grid>
 							</Grid>
 							<Typography align="center" id="result">
-								<span id="value">0</span> Ohms -{' '}
-								<span id="tolerance">0%</span>
+								<span id="value">{resistor}</span> Ohms -{' '}
+								<span id="tolerance">{toleranceValue} %</span>
 							</Typography>
 						</CardContent>
 					</Card>
