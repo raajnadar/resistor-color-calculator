@@ -7,7 +7,6 @@ import CardContent from '@material-ui/core/CardContent'
 import Button from '@material-ui/core/Button'
 import DialogTitle from '@material-ui/core/DialogTitle'
 import DialogContent from '@material-ui/core/DialogContent'
-import DialogActions from '@material-ui/core/DialogActions'
 import Dialog from '@material-ui/core/Dialog'
 import RadioGroup from '@material-ui/core/RadioGroup'
 import Radio from '@material-ui/core/Radio'
@@ -18,10 +17,13 @@ import { withStyles } from '@material-ui/core/styles'
 const styles = theme => ({
 	root: {
 		flexGrow: 1,
-		padding: '48px'
+		padding: '48px',
+		[theme.breakpoints.down('sm')]: {
+			padding: '24px'
+		}
 	},
 	buttonContainer: {
-		margin: '10px 0px',
+		margin: '10px -12px',
 		textAlign: 'center'
 	},
 	button: {
@@ -67,20 +69,6 @@ function App(props) {
 		setActiveDialog(name)
 	}
 
-	function handleCancel() {
-		setDialog(false)
-		setColor({
-			first: 'First color',
-			second: 'Second color',
-			third: 'Third color',
-			fourth: 'Fourth color'
-		})
-	}
-
-	function handleOk() {
-		setDialog(false)
-	}
-
 	const handleChange = (e, value) => {
 		let newColor = color
 
@@ -94,6 +82,7 @@ function App(props) {
 		} else {
 			setColor(newColor)
 		}
+		setDialog(false)
 	}
 
 	const calculator = color => {
@@ -346,14 +335,6 @@ function App(props) {
 						))}
 					</RadioGroup>
 				</DialogContent>
-				<DialogActions>
-					<Button onClick={handleCancel} color="primary">
-						Cancel
-					</Button>
-					<Button onClick={handleOk} color="primary">
-						Ok
-					</Button>
-				</DialogActions>
 			</Dialog>
 		</div>
 	)
