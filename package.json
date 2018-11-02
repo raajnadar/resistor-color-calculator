@@ -5,6 +5,7 @@
 	"homepage": "https://raajnadar.github.io/resistor-color-calculator/",
 	"dependencies": {
 		"@material-ui/core": "^3.5.1",
+		"gh-pages": "^2.0.1",
 		"react": "16.7.0-alpha.2",
 		"react-dom": "16.7.0-alpha.2",
 		"react-scripts": "2.1.1"
@@ -13,7 +14,9 @@
 		"start": "react-scripts start",
 		"build": "react-scripts build",
 		"test": "react-scripts test",
-		"eject": "react-scripts eject"
+		"eject": "react-scripts eject",
+		"predeploy": "yarn build",
+		"deploy": "gh-pages -d build"
 	},
 	"husky": {
 		"hooks": {
