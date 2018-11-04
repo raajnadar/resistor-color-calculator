@@ -198,6 +198,14 @@ function App(props) {
 								spacing={24}>
 								<Grid item lg={3} sm={6} xs={12}>
 									<Button
+										style={{
+											backgroundColor: color.first,
+											color:
+												color.first === 'white' ||
+												color.first === 'First color'
+													? '#000'
+													: '#fff'
+										}}
 										className={classes.button}
 										variant="contained"
 										onClick={() => buttonClick('first')}>
@@ -206,6 +214,14 @@ function App(props) {
 								</Grid>
 								<Grid item lg={3} sm={6} xs={12}>
 									<Button
+										style={{
+											backgroundColor: color.second,
+											color:
+												color.second === 'white' ||
+												color.second === 'Second color'
+													? '#000'
+													: '#fff'
+										}}
 										className={classes.button}
 										variant="contained"
 										onClick={() => buttonClick('second')}>
@@ -214,6 +230,14 @@ function App(props) {
 								</Grid>
 								<Grid item lg={3} sm={6} xs={12}>
 									<Button
+										style={{
+											backgroundColor: color.third,
+											color:
+												color.third === 'white' ||
+												color.third === 'Third color'
+													? '#000'
+													: '#fff'
+										}}
 										className={classes.button}
 										variant="contained"
 										onClick={() => buttonClick('third')}>
@@ -222,6 +246,10 @@ function App(props) {
 								</Grid>
 								<Grid item lg={3} sm={6} xs={12}>
 									<Button
+										style={{
+											backgroundColor: color.fourth,
+											color: '#000'
+										}}
 										className={classes.button}
 										variant="contained"
 										onClick={() => buttonClick('fourth')}>
