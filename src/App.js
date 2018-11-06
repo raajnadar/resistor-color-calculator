@@ -15,8 +15,8 @@ import Footer from './components/Footer'
 import Colors from './list/Colors'
 import Tolerance from './list/Tolerance'
 
-// Helper functions
-import ColorIndex from './functions/ColorIndex'
+// Helper function
+import Calculator from './functions/Calculator'
 
 const styles = theme => ({
 	root: {
@@ -59,14 +59,12 @@ function App(props) {
 			color.second !== 'Second color' &&
 			color.third !== 'Third color'
 		) {
-			let final =
-				(ColorIndex(color.first) + '' + ColorIndex(color.second)) *
-				10 ** ColorIndex(color.third)
+			let final = Calculator(color)
 			setResistor(final)
 		}
 
 		if (color.fourth !== 'Fourth color') {
-			setTolerance(ColorIndex(color.fourth, 'tolerance'))
+			setTolerance(Calculator(color, 'tolerance'))
 		}
 	})
 
