@@ -15,14 +15,12 @@ export default function ColorSelector(props) {
 			disableEscapeKeyDown
 			fullWidth={true}
 			maxWidth="md"
-			aria-labelledby="confirmation-dialog-title">
-			<DialogTitle id="confirmation-dialog-title">
-				Phone Ringtone
-			</DialogTitle>
+			aria-labelledby="dialog-title">
+			<DialogTitle id="dialog-title">Color selector</DialogTitle>
 			<DialogContent>
 				<RadioGroup
-					aria-label="Ringtone"
-					name="ringtone"
+					aria-label="Color selector"
+					name="color"
 					value={props.color[props.activeDialog]}
 					onChange={props.handleChange}>
 					{props.content.map(color => (
