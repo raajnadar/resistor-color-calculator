@@ -8,9 +8,11 @@ import Radio from '@material-ui/core/Radio'
 import FormControlLabel from '@material-ui/core/FormControlLabel'
 
 export default function ColorSelector(props) {
+	const { activeDialog, dialog, color, content, handleChange } = props
+
 	return (
 		<Dialog
-			open={props.dialog}
+			open={dialog}
 			disableBackdropClick
 			disableEscapeKeyDown
 			fullWidth={true}
@@ -21,9 +23,9 @@ export default function ColorSelector(props) {
 				<RadioGroup
 					aria-label="Color selector"
 					name="color"
-					value={props.color[props.activeDialog]}
-					onChange={props.handleChange}>
-					{props.content.map(color => (
+					value={color[activeDialog]}
+					onChange={handleChange}>
+					{content.map(color => (
 						<FormControlLabel
 							value={color}
 							key={color}

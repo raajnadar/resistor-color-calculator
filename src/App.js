@@ -12,8 +12,8 @@ import BugReport from './components/BugReport'
 import Footer from './components/Footer'
 
 // Colors list
-import Colors from './list/Colors'
-import Tolerance from './list/Tolerance'
+import ColorsList from './list/Colors'
+import ToleranceList from './list/Tolerance'
 
 // Helper function
 import Calculator from './functions/Calculator'
@@ -25,6 +25,11 @@ const styles = theme => ({
 		[theme.breakpoints.down('sm')]: {
 			padding: '24px'
 		}
+	},
+	selectBand: {
+		position: 'fixed',
+		right: 40,
+		bottom: 40
 	}
 })
 
@@ -32,40 +37,30 @@ function App(props) {
 	const { classes } = props
 
 	const [color, setColor] = useState({
-		first: 'First color',
-		second: 'Second color',
-		third: 'Third color',
-		fourth: 'Fourth color'
+		first: 'Brown',
+		second: 'Brown',
+		third: 'Brown',
+		fourth: 'Brown'
 	})
 
 	const [dialog, setDialog] = useState(false)
-	const [content, setDialogContent] = useState(Colors)
+	const [content, setDialogContent] = useState(ColorsList)
 	const [activeDialog, setActiveDialog] = useState('')
 	const buttonClick = name => {
 		if (name === 'fourth') {
-			setDialogContent(Tolerance)
+			setDialogContent(ToleranceList)
 		} else {
-			setDialogContent(Colors)
+			setDialogContent(ColorsList)
 		}
 		setDialog(true)
 		setActiveDialog(name)
 	}
 
 	const [resistor, setResistor] = useState(0)
-	const [toleranceValue, setTolerance] = useState(0)
+	const [tolerance, setTolerance] = useState(0)
 	useEffect(() => {
-		if (
-			color.first !== 'First color' &&
-			color.second !== 'Second color' &&
-			color.third !== 'Third color'
-		) {
-			let final = Calculator(color)
-			setResistor(final)
-		}
-
-		if (color.fourth !== 'Fourth color') {
-			setTolerance(Calculator(color, 'tolerance'))
-		}
+		setResistor(Calculator(color))
+		setTolerance(Calculator(color, 'tolerance'))
 	})
 
 	const handleChange = (e, value) => {
@@ -93,7 +88,7 @@ function App(props) {
 					resistor={resistor}
 					color={color}
 					buttonClick={buttonClick}
-					toleranceValue={toleranceValue}
+					tolerance={tolerance}
 				/>
 
 				<BugReport />

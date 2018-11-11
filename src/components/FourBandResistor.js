@@ -19,6 +19,7 @@ const styles = theme => ({
 })
 
 function FourBandResistor(props) {
+	const { buttonClick, classes, color, resistor, tolerance } = props
 	return (
 		<Grid item xs={12}>
 			<Card>
@@ -34,67 +35,67 @@ function FourBandResistor(props) {
 						<Grid item lg={3} sm={6} xs={12}>
 							<Button
 								style={{
-									backgroundColor: props.color.first,
+									backgroundColor: color.first,
 									color:
-										props.color.first === 'White' ||
-										props.color.first === 'First color'
+										color.first === 'White'
 											? '#000'
 											: '#fff'
 								}}
-								className={props.classes.button}
+								className={classes.button}
 								variant="contained"
 								onClick={() => props.buttonClick('first')}>
-								{props.color.first}
+								{color.first}
 							</Button>
 						</Grid>
 						<Grid item lg={3} sm={6} xs={12}>
 							<Button
 								style={{
-									backgroundColor: props.color.second,
+									backgroundColor: color.second,
 									color:
-										props.color.second === 'White' ||
-										props.color.second === 'Second color'
+										color.second === 'White'
 											? '#000'
 											: '#fff'
 								}}
-								className={props.classes.button}
+								className={classes.button}
 								variant="contained"
-								onClick={() => props.buttonClick('second')}>
+								onClick={() => buttonClick('second')}>
 								{props.color.second}
 							</Button>
 						</Grid>
 						<Grid item lg={3} sm={6} xs={12}>
 							<Button
 								style={{
-									backgroundColor: props.color.third,
+									backgroundColor: color.third,
 									color:
-										props.color.third === 'White' ||
-										props.color.third === 'Third color'
+										color.third === 'White'
 											? '#000'
 											: '#fff'
 								}}
-								className={props.classes.button}
+								className={classes.button}
 								variant="contained"
-								onClick={() => props.buttonClick('third')}>
-								{props.color.third}
+								onClick={() => buttonClick('third')}>
+								{color.third}
 							</Button>
 						</Grid>
 						<Grid item lg={3} sm={6} xs={12}>
 							<Button
 								style={{
-									backgroundColor: props.color.fourth,
-									color: '#000'
+									backgroundColor: color.fourth,
+									color:
+										color.fourth === 'White'
+											? '#000'
+											: '#fff'
 								}}
-								className={props.classes.button}
+								className={classes.button}
 								variant="contained"
-								onClick={() => props.buttonClick('fourth')}>
-								{props.color.fourth}
+								onClick={() => buttonClick('fourth')}>
+								{color.fourth}
 							</Button>
 						</Grid>
 					</Grid>
 					<Typography align="center" id="result">
-						<span id="value">{props.resistor}</span> Ohms -{' '}
-						<span id="tolerance">{props.toleranceValue} %</span>
+						<span id="value">{resistor}</span> Ohms -{' '}
+						<span id="tolerance">{tolerance} %</span>
 					</Typography>
 				</CardContent>
 			</Card>
