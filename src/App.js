@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 
 import Grid from '@material-ui/core/Grid'
+import Typography from '@material-ui/core/Typography'
 
 import { withStyles } from '@material-ui/core/styles'
 
@@ -82,6 +83,15 @@ function App(props) {
 	return (
 		<div className={classes.root}>
 			<Grid container spacing={24}>
+				<Grid xs={12} item>
+					<Typography
+						variant="h3"
+						component="h1"
+						align="center"
+						gutterBottom>
+						Resistor Color Calculator
+					</Typography>
+				</Grid>
 				<AboutProject />
 
 				<FourBandResistor
