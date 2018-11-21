@@ -1,13 +1,13 @@
 {
   "main.css": "/resistor-color-calculator/static/css/main.12df41f4.chunk.css",
-  "main.js": "/resistor-color-calculator/static/js/main.a904e430.chunk.js",
-  "main.js.map": "/resistor-color-calculator/static/js/main.a904e430.chunk.js.map",
-  "static/js/1.3eaf3bc5.chunk.js": "/resistor-color-calculator/static/js/1.3eaf3bc5.chunk.js",
-  "static/js/1.3eaf3bc5.chunk.js.map": "/resistor-color-calculator/static/js/1.3eaf3bc5.chunk.js.map",
+  "main.js": "/resistor-color-calculator/static/js/main.ef4b0e27.chunk.js",
+  "main.js.map": "/resistor-color-calculator/static/js/main.ef4b0e27.chunk.js.map",
+  "static/js/1.15c99c21.chunk.js": "/resistor-color-calculator/static/js/1.15c99c21.chunk.js",
+  "static/js/1.15c99c21.chunk.js.map": "/resistor-color-calculator/static/js/1.15c99c21.chunk.js.map",
   "runtime~main.js": "/resistor-color-calculator/static/js/runtime~main.29dfe2b4.js",
   "runtime~main.js.map": "/resistor-color-calculator/static/js/runtime~main.29dfe2b4.js.map",
   "static/css/main.12df41f4.chunk.css.map": "/resistor-color-calculator/static/css/main.12df41f4.chunk.css.map",
   "index.html": "/resistor-color-calculator/index.html",
-  "precache-manifest.143cdde3d4922cdcbc24ce469a7c7eea.js": "/resistor-color-calculator/precache-manifest.143cdde3d4922cdcbc24ce469a7c7eea.js",
+  "precache-manifest.7e5f7344c2ba071c1bd0d49f03f8e2d6.js": "/resistor-color-calculator/precache-manifest.7e5f7344c2ba071c1bd0d49f03f8e2d6.js",
   "service-worker.js": "/resistor-color-calculator/service-worker.js"
 }

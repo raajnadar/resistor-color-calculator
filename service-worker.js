@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/resistor-color-calculator/precache-manifest.143cdde3d4922cdcbc24ce469a7c7eea.js"
+  "/resistor-color-calculator/precache-manifest.7e5f7344c2ba071c1bd0d49f03f8e2d6.js"
 );
 
 workbox.clientsClaim();
