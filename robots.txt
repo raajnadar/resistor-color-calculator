@@ -1,0 +1,4 @@
+Sitemap: https://raajnadar.github.io/resistor-color-calculator/sitemap.xml
+
+User-agent: *
+Disallow:
