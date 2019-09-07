@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react'
 
+import { makeStyles } from '@material-ui/core/styles'
+
 import Grid from '@material-ui/core/Grid'
 import Typography from '@material-ui/core/Typography'
-
-import { withStyles } from '@material-ui/core/styles'
 
 // Import component
 import ColorSelector from './components/ColorSelector'
@@ -19,23 +19,8 @@ import ToleranceList from './list/Tolerance'
 // Helper function
 import Calculator from './functions/Calculator'
 
-const styles = theme => ({
-	root: {
-		flexGrow: 1,
-		padding: '48px',
-		[theme.breakpoints.down('sm')]: {
-			padding: '24px'
-		}
-	},
-	selectBand: {
-		position: 'fixed',
-		right: 40,
-		bottom: 40
-	}
-})
-
-function App(props) {
-	const { classes } = props
+export default function App() {
+	const classes = useStyles()
 
 	const [color, setColor] = useState({
 		first: 'Brown',
@@ -82,7 +67,7 @@ function App(props) {
 
 	return (
 		<div className={classes.root}>
-			<Grid container spacing={24}>
+			<Grid container spacing={2}>
 				<Grid xs={12} item>
 					<Typography
 						variant="h3"
@@ -117,4 +102,17 @@ function App(props) {
 	)
 }
 
-export default withStyles(styles)(App)
+const useStyles = makeStyles(theme => ({
+	root: {
+		flexGrow: 1,
+		padding: '48px',
+		[theme.breakpoints.down('sm')]: {
+			padding: '24px'
+		}
+	},
+	selectBand: {
+		position: 'fixed',
+		right: 40,
+		bottom: 40
+	}
+}))
