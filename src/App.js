@@ -47,7 +47,7 @@ export default function App() {
 	useEffect(() => {
 		setResistor(Calculator(color))
 		setTolerance(Calculator(color, 'tolerance'))
-	})
+	}, [color])
 
 	const handleChange = (e, value) => {
 		let newColor = color
