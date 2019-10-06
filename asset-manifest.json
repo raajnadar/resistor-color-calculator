@@ -1,13 +1,21 @@
 {
-  "main.css": "/resistor-color-calculator/static/css/main.9f20b6cc.chunk.css",
-  "main.js": "/resistor-color-calculator/static/js/main.9fe9e0ae.chunk.js",
-  "main.js.map": "/resistor-color-calculator/static/js/main.9fe9e0ae.chunk.js.map",
-  "static/js/1.2e2e4c5b.chunk.js": "/resistor-color-calculator/static/js/1.2e2e4c5b.chunk.js",
-  "static/js/1.2e2e4c5b.chunk.js.map": "/resistor-color-calculator/static/js/1.2e2e4c5b.chunk.js.map",
-  "runtime~main.js": "/resistor-color-calculator/static/js/runtime~main.29dfe2b4.js",
-  "runtime~main.js.map": "/resistor-color-calculator/static/js/runtime~main.29dfe2b4.js.map",
-  "static/css/main.9f20b6cc.chunk.css.map": "/resistor-color-calculator/static/css/main.9f20b6cc.chunk.css.map",
-  "index.html": "/resistor-color-calculator/index.html",
-  "precache-manifest.ef8ea1fd981854aa02b8fa2240dba4bd.js": "/resistor-color-calculator/precache-manifest.ef8ea1fd981854aa02b8fa2240dba4bd.js",
-  "service-worker.js": "/resistor-color-calculator/service-worker.js"
+  "files": {
+    "main.css": "/resistor-color-calculator/static/css/main.f20f390d.chunk.css",
+    "main.js": "/resistor-color-calculator/static/js/main.da466574.chunk.js",
+    "main.js.map": "/resistor-color-calculator/static/js/main.da466574.chunk.js.map",
+    "runtime-main.js": "/resistor-color-calculator/static/js/runtime-main.f69f47e6.js",
+    "runtime-main.js.map": "/resistor-color-calculator/static/js/runtime-main.f69f47e6.js.map",
+    "static/js/2.e369d03e.chunk.js": "/resistor-color-calculator/static/js/2.e369d03e.chunk.js",
+    "static/js/2.e369d03e.chunk.js.map": "/resistor-color-calculator/static/js/2.e369d03e.chunk.js.map",
+    "index.html": "/resistor-color-calculator/index.html",
+    "precache-manifest.4110ce0e7e3d708c8146816dd84feddc.js": "/resistor-color-calculator/precache-manifest.4110ce0e7e3d708c8146816dd84feddc.js",
+    "service-worker.js": "/resistor-color-calculator/service-worker.js",
+    "static/css/main.f20f390d.chunk.css.map": "/resistor-color-calculator/static/css/main.f20f390d.chunk.css.map"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f69f47e6.js",
+    "static/js/2.e369d03e.chunk.js",
+    "static/css/main.f20f390d.chunk.css",
+    "static/js/main.da466574.chunk.js"
+  ]
 }
