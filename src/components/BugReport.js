@@ -16,32 +16,34 @@ export default function BugReport() {
 					<Typography variant="body1" component="h2" gutterBottom>
 						Nothing in this world is 100% bug free. Found any bug in
 						this project? It will be great if you raise an issue on
-						the
+						the{' '}
 						<a
 							href="https://github.com/raajnadar/resistor-color-calculator/issues"
 							target="_blank"
+							title="Resistor color calculator github issues"
 							rel="noopener noreferrer">
 							GitHub issues here
 						</a>
-						.
 					</Typography>
 					<Typography variant="body1" component="h2" gutterBottom>
 						If you are interested in improving this project fork
-						this repository and make a pull request, and also read
+						this repository and make a pull request, and also read{' '}
 						<a
 							href="https://github.com/raajnadar/resistor-color-calculator/blob/master/CONTRIBUTING.md"
 							target="_blank"
+							title="Resistor color calculator contributing guide"
 							rel="noopener noreferrer">
-							how to contribute?
+							how to contribute?{' '}
 						</a>
-						before making a pull request. If you liked the project
+						before sending a pull request. If you liked the project
 						idea or this project helped you make sure you leave a
-						star on the
+						star on the{' '}
 						<a
 							href="https://github.com/raajnadar/resistor-color-calculator"
 							target="_blank"
+							title="Resistor color calculator"
 							rel="noopener noreferrer">
-							GitHub repository
+							GitHub repository{' '}
 						</a>
 						to show some support.
 					</Typography>
