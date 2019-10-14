@@ -16,8 +16,9 @@
 		"build": "react-scripts build",
 		"test": "react-scripts test",
 		"eject": "react-scripts eject",
-		"predeploy": "yarn build",
-		"deploy": "gh-pages -d build"
+		"predeploy": "yarn lint && yarn build",
+		"deploy": "gh-pages -d build",
+		"lint": "eslint **/*{.js,.jsx}"
 	},
 	"browserslist": [
 		">0.2%",
