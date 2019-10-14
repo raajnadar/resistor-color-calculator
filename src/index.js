@@ -23,6 +23,9 @@ const theme = createMuiTheme({
 			main: indigo[500],
 			dark: indigo[600]
 		}
+	},
+	typography: {
+		fontFamily: "'Raleway', sans-serif"
 	}
 })
 
