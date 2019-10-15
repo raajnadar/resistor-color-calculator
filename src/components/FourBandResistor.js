@@ -28,10 +28,7 @@ export default function FourBandResistor(props) {
 							<Button
 								style={{
 									backgroundColor: color.first,
-									color:
-										color.first === 'White'
-											? '#000'
-											: '#fff'
+									color: color.first === 'White' ? '#000' : '#fff'
 								}}
 								className={classes.button}
 								variant="contained"
@@ -43,10 +40,7 @@ export default function FourBandResistor(props) {
 							<Button
 								style={{
 									backgroundColor: color.second,
-									color:
-										color.second === 'White'
-											? '#000'
-											: '#fff'
+									color: color.second === 'White' ? '#000' : '#fff'
 								}}
 								className={classes.button}
 								variant="contained"
@@ -58,10 +52,7 @@ export default function FourBandResistor(props) {
 							<Button
 								style={{
 									backgroundColor: color.third,
-									color:
-										color.third === 'White'
-											? '#000'
-											: '#fff'
+									color: color.third === 'White' ? '#000' : '#fff'
 								}}
 								className={classes.button}
 								variant="contained"
@@ -73,10 +64,7 @@ export default function FourBandResistor(props) {
 							<Button
 								style={{
 									backgroundColor: color.fourth,
-									color:
-										color.fourth === 'White'
-											? '#000'
-											: '#fff'
+									color: color.fourth === 'White' ? '#000' : '#fff'
 								}}
 								className={classes.button}
 								variant="contained"

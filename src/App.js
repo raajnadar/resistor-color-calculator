@@ -69,11 +69,7 @@ export default function App() {
 		<div className={classes.root}>
 			<Grid container spacing={2}>
 				<Grid xs={12} item>
-					<Typography
-						variant="h3"
-						component="h1"
-						align="center"
-						gutterBottom>
+					<Typography variant="h3" component="h1" align="center" gutterBottom>
 						Resistor Color Calculator
 					</Typography>
 				</Grid>

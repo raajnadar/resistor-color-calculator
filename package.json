@@ -17,7 +17,7 @@
 		"test": "react-scripts test",
 		"eject": "react-scripts eject",
 		"predeploy": "yarn lint && yarn build",
-		"deploy": "gh-pages -d build",
+		"deploy": "gh-pages -d build --repo https://github.com/raajnadar/resistor-color-calculator.git",
 		"lint": "eslint **/*{.js,.jsx}"
 	},
 	"browserslist": [
@@ -27,8 +27,11 @@
 		"not op_mini all"
 	],
 	"devDependencies": {
-		"eslint-config-prettier": "^4.0.0",
+		"eslint": "^6.0.0",
+		"eslint-config-prettier": "^6.0.0",
 		"eslint-plugin-prettier": "^3.1.0",
-		"prettier": "^1.16.4"
+		"eslint-plugin-react": "^7.14.0",
+		"eslint-plugin-react-hooks": "^1.6.0",
+		"prettier": "^1.18.2"
 	}
 }
