@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { ChangeEvent, useState, useEffect } from 'react'
 
 import { makeStyles } from '@material-ui/core/styles'
 
@@ -32,7 +32,18 @@ export default function App() {
 	const [dialog, setDialog] = useState(false)
 	const [content, setDialogContent] = useState(ColorsList)
 	const [activeDialog, setActiveDialog] = useState('')
-	const buttonClick = name => {
+
+	const [resistor, setResistor] = useState(0)
+	const [tolerance, setTolerance] = useState(0)
+
+	useEffect(() => {
+		if (!dialog) {
+			setResistor(Calculator(color))
+			setTolerance(Calculator(color, 'tolerance'))
+		}
+	}, [color, dialog])
+
+	const buttonClick = (name: string) => {
 		if (name === 'fourth') {
 			setDialogContent(ToleranceList)
 		} else {
@@ -42,15 +53,8 @@ export default function App() {
 		setActiveDialog(name)
 	}
 
-	const [resistor, setResistor] = useState(0)
-	const [tolerance, setTolerance] = useState(0)
-	useEffect(() => {
-		setResistor(Calculator(color))
-		setTolerance(Calculator(color, 'tolerance'))
-	}, [color])
-
-	const handleChange = (e, value) => {
-		let newColor = color
+	const handleChange = (_e: ChangeEvent<HTMLInputElement>, value: string) => {
+		let newColor: any = color
 
 		newColor[activeDialog] = value
 		if (activeDialog === 'first') {

@@ -7,7 +7,15 @@ import RadioGroup from '@material-ui/core/RadioGroup'
 import Radio from '@material-ui/core/Radio'
 import FormControlLabel from '@material-ui/core/FormControlLabel'
 
-export default function ColorSelector(props) {
+type Props = {
+	activeDialog: string;
+	dialog: boolean;
+	color: any;
+	content: any;
+	handleChange: any;
+}
+
+export default function ColorSelector(props: Props) {
 	const { activeDialog, dialog, color, content, handleChange } = props
 
 	return (
@@ -25,10 +33,10 @@ export default function ColorSelector(props) {
 					name="color"
 					value={color[activeDialog]}
 					onChange={handleChange}>
-					{content.map(color => (
+					{content.map((color: string) => (
 						<FormControlLabel
-							value={color}
 							key={color}
+							value={color}
 							control={<Radio />}
 							label={color}
 						/>

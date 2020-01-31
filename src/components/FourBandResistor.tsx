@@ -8,9 +8,19 @@ import Typography from '@material-ui/core/Typography'
 import Card from '@material-ui/core/Card'
 import CardContent from '@material-ui/core/CardContent'
 
-export default function FourBandResistor(props) {
-	const { buttonClick, color, resistor, tolerance } = props
+import Converter from '../functions/Converter'
+
+type Props = {
+	buttonClick: any;
+	color: any;
+	resistor: number;
+	tolerance: number;
+}
+
+export default function FourBandResistor(props: Props) {
 	const classes = useStyles()
+
+	const { buttonClick, color, resistor, tolerance } = props
 
 	return (
 		<Grid item xs={12}>
@@ -74,7 +84,7 @@ export default function FourBandResistor(props) {
 						</Grid>
 					</Grid>
 					<Typography align="center" id="result">
-						<span id="value">{resistor}</span> Ohms -
+						<span id="value">{Converter(resistor)}</span> Ohms -
 						<span id="tolerance">{tolerance} %</span>
 					</Typography>
 				</CardContent>
@@ -83,7 +93,7 @@ export default function FourBandResistor(props) {
 	)
 }
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles({
 	buttonContainer: {
 		margin: '10px -12px',
 		textAlign: 'center'
@@ -91,4 +101,4 @@ const useStyles = makeStyles(theme => ({
 	button: {
 		minWidth: '200px'
 	}
-}))
+})
