@@ -16,7 +16,7 @@
 		"build": "react-scripts build",
 		"test": "react-scripts test",
 		"eject": "react-scripts eject",
-		"predeploy": "yarn lint && yarn build",
+		"predeploy": "yarn lint && yarn tsc && yarn build",
 		"deploy": "gh-pages -d build --repo https://github.com/raajnadar/resistor-color-calculator.git",
 		"lint": "eslint **/*{.js,.jsx}",
 		"typescript": "yarn tsc"
