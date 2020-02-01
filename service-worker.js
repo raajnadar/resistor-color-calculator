@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/resistor-color-calculator/precache-manifest.46d80a7ed8b16430ca025a46127786e6.js"
+  "/resistor-color-calculator/precache-manifest.5a7ae37ed7da478f5d4313e61fbff429.js"
 );
 
 self.addEventListener('message', (event) => {

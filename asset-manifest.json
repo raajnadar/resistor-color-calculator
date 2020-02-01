@@ -1,21 +1,22 @@
 {
   "files": {
-    "main.css": "/resistor-color-calculator/static/css/main.c8dc733d.chunk.css",
-    "main.js": "/resistor-color-calculator/static/js/main.593844cf.chunk.js",
-    "main.js.map": "/resistor-color-calculator/static/js/main.593844cf.chunk.js.map",
-    "runtime-main.js": "/resistor-color-calculator/static/js/runtime-main.f69f47e6.js",
-    "runtime-main.js.map": "/resistor-color-calculator/static/js/runtime-main.f69f47e6.js.map",
-    "static/js/2.e6e8805f.chunk.js": "/resistor-color-calculator/static/js/2.e6e8805f.chunk.js",
-    "static/js/2.e6e8805f.chunk.js.map": "/resistor-color-calculator/static/js/2.e6e8805f.chunk.js.map",
+    "main.css": "/resistor-color-calculator/static/css/main.1999fdcd.chunk.css",
+    "main.js": "/resistor-color-calculator/static/js/main.295917ec.chunk.js",
+    "main.js.map": "/resistor-color-calculator/static/js/main.295917ec.chunk.js.map",
+    "runtime-main.js": "/resistor-color-calculator/static/js/runtime-main.8c630bbe.js",
+    "runtime-main.js.map": "/resistor-color-calculator/static/js/runtime-main.8c630bbe.js.map",
+    "static/js/2.eb4a4c3a.chunk.js": "/resistor-color-calculator/static/js/2.eb4a4c3a.chunk.js",
+    "static/js/2.eb4a4c3a.chunk.js.map": "/resistor-color-calculator/static/js/2.eb4a4c3a.chunk.js.map",
     "index.html": "/resistor-color-calculator/index.html",
-    "precache-manifest.46d80a7ed8b16430ca025a46127786e6.js": "/resistor-color-calculator/precache-manifest.46d80a7ed8b16430ca025a46127786e6.js",
+    "precache-manifest.5a7ae37ed7da478f5d4313e61fbff429.js": "/resistor-color-calculator/precache-manifest.5a7ae37ed7da478f5d4313e61fbff429.js",
     "service-worker.js": "/resistor-color-calculator/service-worker.js",
-    "static/css/main.c8dc733d.chunk.css.map": "/resistor-color-calculator/static/css/main.c8dc733d.chunk.css.map"
+    "static/css/main.1999fdcd.chunk.css.map": "/resistor-color-calculator/static/css/main.1999fdcd.chunk.css.map",
+    "static/js/2.eb4a4c3a.chunk.js.LICENSE.txt": "/resistor-color-calculator/static/js/2.eb4a4c3a.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.f69f47e6.js",
-    "static/js/2.e6e8805f.chunk.js",
-    "static/css/main.c8dc733d.chunk.css",
-    "static/js/main.593844cf.chunk.js"
+    "static/js/runtime-main.8c630bbe.js",
+    "static/js/2.eb4a4c3a.chunk.js",
+    "static/css/main.1999fdcd.chunk.css",
+    "static/js/main.295917ec.chunk.js"
   ]
 }
