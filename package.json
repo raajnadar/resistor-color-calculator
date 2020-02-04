@@ -18,7 +18,7 @@
 		"eject": "react-scripts eject",
 		"predeploy": "yarn lint && yarn tsc && yarn build",
 		"deploy": "gh-pages -d build --repo https://github.com/raajnadar/resistor-color-calculator.git",
-		"lint": "eslint **/*{.js,.jsx}",
+		"lint": "eslint **/*{.ts,.tsx}",
 		"typescript": "yarn tsc"
 	},
 	"browserslist": [
@@ -28,6 +28,10 @@
 		"not op_mini all"
 	],
 	"devDependencies": {
+		"@testing-library/jest-dom": "^5.1.1",
+		"@testing-library/react": "^9.4.0",
+		"@testing-library/user-event": "^8.1.0",
+		"@types/jest": "^25.1.2",
 		"@types/node": "^13.1.6",
 		"@types/react": "^16.9.17",
 		"@types/react-dom": "^16.9.4",
