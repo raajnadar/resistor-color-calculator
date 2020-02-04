@@ -8,11 +8,11 @@ import Radio from '@material-ui/core/Radio'
 import FormControlLabel from '@material-ui/core/FormControlLabel'
 
 type Props = {
-	activeDialog: string;
-	dialog: boolean;
-	color: any;
-	content: any;
-	handleChange: any;
+	activeDialog: string
+	dialog: boolean
+	color: any
+	content: any
+	handleChange: any
 }
 
 export default function ColorSelector(props: Props) {

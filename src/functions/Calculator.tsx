@@ -2,9 +2,9 @@
 import ColorIndex from './ColorIndex'
 
 type Color = {
-	first: string,
-	second: string,
-	third: string,
+	first: string
+	second: string
+	third: string
 	fourth: string
 }
 

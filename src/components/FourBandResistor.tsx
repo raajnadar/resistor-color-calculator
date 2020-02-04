@@ -11,10 +11,10 @@ import CardContent from '@material-ui/core/CardContent'
 import Converter from '../functions/Converter'
 
 type Props = {
-	buttonClick: any;
-	color: any;
-	resistor: number;
-	tolerance: number;
+	buttonClick: any
+	color: any
+	resistor: number
+	tolerance: number
 }
 
 export default function FourBandResistor(props: Props) {
