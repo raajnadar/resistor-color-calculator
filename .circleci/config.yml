@@ -27,3 +27,6 @@ jobs:
       - run:
           name: typescript
           command: yarn tsc
+      - run:
+          name: unit-test
+          command: yarn test
