@@ -1,5 +1,5 @@
 <p align="center">
-  <img alt="react-native-paper" src="https://firebasestorage.googleapis.com/v0/b/rajendran-nadar.appspot.com/o/projects%2Fresistor_color_calculator_thumb.png?alt=media&token=44f9bccd-1159-4774-917b-6ddb8ff31bab" width="200">
+  <img alt="resitor-color-calculator" src="assets/resistor_color_calculator_thumb.png" width="200" height="200">
 </p>
 
 <h1 align="center">Resistor Color Calculator</h1>
