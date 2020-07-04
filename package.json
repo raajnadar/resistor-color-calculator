@@ -4,12 +4,11 @@
 	"private": true,
 	"homepage": "https://raajnadar.github.io/resistor-color-calculator/",
 	"dependencies": {
-		"@material-ui/core": "^4.5.0",
-		"@material-ui/styles": "^4.5.0",
+		"@material-ui/core": "^4.11.0",
 		"gh-pages": "^2.0.1",
-		"react": "^16.10.2",
-		"react-dom": "^16.10.2",
-		"react-scripts": "^3.2.0"
+		"react": "^16.13.1",
+		"react-dom": "^16.13.1",
+		"react-scripts": "^3.4.1"
 	},
 	"scripts": {
 		"start": "react-scripts start",
@@ -22,8 +21,8 @@
 		"typescript": "yarn tsc"
 	},
 	"eslintConfig": {
-    "extends": "react-app"
-  },
+		"extends": "react-app"
+	},
 	"browserslist": [
 		">0.2%",
 		"not dead",
@@ -35,9 +34,9 @@
 		"@testing-library/react": "^9.4.0",
 		"@testing-library/user-event": "^8.1.0",
 		"@types/jest": "^25.1.2",
-		"@types/node": "^13.1.6",
-		"@types/react": "^16.9.17",
-		"@types/react-dom": "^16.9.4",
-		"typescript": "^3.7.0"
+		"@types/node": "^14.0.14",
+		"@types/react": "^16.9.41",
+		"@types/react-dom": "^16.9.8",
+		"typescript": "^3.9.6"
 	}
 }
