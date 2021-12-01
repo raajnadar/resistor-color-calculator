@@ -109,14 +109,9 @@ export default function App() {
 const useStyles = makeStyles((theme: Theme) => ({
 	root: {
 		flexGrow: 1,
-		padding: '48px',
+		padding: '30px',
 		[theme.breakpoints.down('sm')]: {
 			padding: '24px'
 		}
-	},
-	selectBand: {
-		position: 'fixed',
-		right: 40,
-		bottom: 40
 	}
 }))

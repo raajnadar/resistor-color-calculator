@@ -1,5 +1,3 @@
-import makeStyles from '@mui/styles/makeStyles'
-
 import Grid from '@mui/material/Grid'
 import Button from '@mui/material/Button'
 import Typography from '@mui/material/Typography'
@@ -16,8 +14,6 @@ type Props = {
 }
 
 export default function FourBandResistor(props: Props) {
-	const classes = useStyles()
-
 	const { buttonClick, color, resistor, tolerance } = props
 
 	return (
@@ -27,14 +23,13 @@ export default function FourBandResistor(props: Props) {
 					<Typography variant="h5" component="h2" gutterBottom>
 						4 band resistor color
 					</Typography>
-					<Grid className={classes.buttonContainer} container spacing={2}>
+					<Grid m="10px -12px" textAlign="center" container spacing={2}>
 						<Grid item lg={3} sm={6} xs={12}>
 							<Button
 								style={{
 									backgroundColor: color.first,
 									color: color.first === 'White' ? '#000' : '#fff'
 								}}
-								className={classes.button}
 								variant="contained"
 								onClick={() => props.buttonClick('first')}>
 								{color.first}
@@ -46,7 +41,6 @@ export default function FourBandResistor(props: Props) {
 									backgroundColor: color.second,
 									color: color.second === 'White' ? '#000' : '#fff'
 								}}
-								className={classes.button}
 								variant="contained"
 								onClick={() => buttonClick('second')}>
 								{props.color.second}
@@ -58,7 +52,6 @@ export default function FourBandResistor(props: Props) {
 									backgroundColor: color.third,
 									color: color.third === 'White' ? '#000' : '#fff'
 								}}
-								className={classes.button}
 								variant="contained"
 								onClick={() => buttonClick('third')}>
 								{color.third}
@@ -70,7 +63,6 @@ export default function FourBandResistor(props: Props) {
 									backgroundColor: color.fourth,
 									color: color.fourth === 'White' ? '#000' : '#fff'
 								}}
-								className={classes.button}
 								variant="contained"
 								onClick={() => buttonClick('fourth')}>
 								{color.fourth}
@@ -78,21 +70,31 @@ export default function FourBandResistor(props: Props) {
 						</Grid>
 					</Grid>
 					<Typography align="center" id="result">
-						<span id="value">{Converter(resistor)}</span> Ohms -
-						<span id="tolerance">{tolerance} %</span>
+						<Typography
+							component="span"
+							display="inline"
+							variant="h5"
+							id="value">
+							{Converter(resistor)}
+						</Typography>
+						<Typography
+							component="span"
+							display="inline"
+							variant="h5"
+							ml={1}
+							mr={1}>
+							Ohms &amp;
+						</Typography>
+						<Typography
+							component="span"
+							display="inline"
+							variant="h5"
+							id="tolerance">
+							{tolerance}%
+						</Typography>
 					</Typography>
 				</CardContent>
 			</Card>
 		</Grid>
 	)
 }
-
-const useStyles = makeStyles({
-	buttonContainer: {
-		margin: '10px -12px',
-		textAlign: 'center'
-	},
-	button: {
-		minWidth: '200px'
-	}
-})
