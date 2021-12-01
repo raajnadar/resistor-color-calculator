@@ -1,11 +1,9 @@
-import React from 'react'
-
-import DialogTitle from '@material-ui/core/DialogTitle'
-import DialogContent from '@material-ui/core/DialogContent'
-import Dialog from '@material-ui/core/Dialog'
-import RadioGroup from '@material-ui/core/RadioGroup'
-import Radio from '@material-ui/core/Radio'
-import FormControlLabel from '@material-ui/core/FormControlLabel'
+import DialogTitle from '@mui/material/DialogTitle'
+import DialogContent from '@mui/material/DialogContent'
+import Dialog from '@mui/material/Dialog'
+import RadioGroup from '@mui/material/RadioGroup'
+import Radio from '@mui/material/Radio'
+import FormControlLabel from '@mui/material/FormControlLabel'
 
 type Props = {
 	activeDialog: string
@@ -21,10 +19,9 @@ export default function ColorSelector(props: Props) {
 	return (
 		<Dialog
 			open={dialog}
-			disableBackdropClick
 			disableEscapeKeyDown
 			fullWidth={true}
-			maxWidth="md"
+			maxWidth="sm"
 			aria-labelledby="dialog-title">
 			<DialogTitle id="dialog-title">Color selector</DialogTitle>
 			<DialogContent>

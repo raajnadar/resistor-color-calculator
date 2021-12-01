@@ -1,12 +1,10 @@
-import React from 'react'
+import makeStyles from '@mui/styles/makeStyles'
 
-import { makeStyles } from '@material-ui/core/styles'
-
-import Grid from '@material-ui/core/Grid'
-import Button from '@material-ui/core/Button'
-import Typography from '@material-ui/core/Typography'
-import Card from '@material-ui/core/Card'
-import CardContent from '@material-ui/core/CardContent'
+import Grid from '@mui/material/Grid'
+import Button from '@mui/material/Button'
+import Typography from '@mui/material/Typography'
+import Card from '@mui/material/Card'
+import CardContent from '@mui/material/CardContent'
 
 import Converter from '../functions/Converter'
 
@@ -29,11 +27,7 @@ export default function FourBandResistor(props: Props) {
 					<Typography variant="h5" component="h2" gutterBottom>
 						4 band resistor color
 					</Typography>
-					<Grid
-						className={classes.buttonContainer}
-						justify="center"
-						container
-						spacing={2}>
+					<Grid className={classes.buttonContainer} container spacing={2}>
 						<Grid item lg={3} sm={6} xs={12}>
 							<Button
 								style={{

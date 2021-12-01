@@ -1,9 +1,7 @@
-import React from 'react'
-
-import Grid from '@material-ui/core/Grid'
-import Typography from '@material-ui/core/Typography'
-import Card from '@material-ui/core/Card'
-import CardContent from '@material-ui/core/CardContent'
+import Grid from '@mui/material/Grid'
+import Typography from '@mui/material/Typography'
+import Card from '@mui/material/Card'
+import CardContent from '@mui/material/CardContent'
 
 export default function BugReport() {
 	return (

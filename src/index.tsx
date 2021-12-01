@@ -1,17 +1,15 @@
-import React from 'react'
 import { render } from 'react-dom'
 
-import './index.css'
-
-import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles'
-import purple from '@material-ui/core/colors/purple'
-import indigo from '@material-ui/core/colors/indigo'
-import CssBaseline from '@material-ui/core/CssBaseline'
+import ThemeProvider from '@mui/material/styles/ThemeProvider'
+import createTheme from '@mui/material/styles/createTheme'
+import purple from '@mui/material/colors/purple'
+import indigo from '@mui/material/colors/indigo'
+import CssBaseline from '@mui/material/CssBaseline'
 
 import App from './App'
 import * as serviceWorker from './serviceWorker'
 
-const theme = createMuiTheme({
+const theme = createTheme({
 	palette: {
 		primary: {
 			light: purple[400],
@@ -30,10 +28,10 @@ const theme = createMuiTheme({
 })
 
 render(
-	<MuiThemeProvider theme={theme}>
+	<ThemeProvider theme={theme}>
 		<CssBaseline />
 		<App />
-	</MuiThemeProvider>,
+	</ThemeProvider>,
 	document.getElementById('root')
 )
 

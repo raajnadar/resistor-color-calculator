@@ -1,9 +1,10 @@
-import React, { ChangeEvent, useState, useEffect } from 'react'
+import React from 'react'
 
-import { makeStyles } from '@material-ui/core/styles'
+import makeStyles from '@mui/styles/makeStyles'
 
-import Grid from '@material-ui/core/Grid'
-import Typography from '@material-ui/core/Typography'
+import Grid from '@mui/material/Grid'
+import Typography from '@mui/material/Typography'
+import { Theme } from '@mui/material'
 
 // Import component
 import ColorSelector from './components/ColorSelector'
@@ -22,21 +23,21 @@ import Calculator from './functions/Calculator'
 export default function App() {
 	const classes = useStyles()
 
-	const [color, setColor] = useState({
+	const [color, setColor] = React.useState({
 		first: 'Brown',
 		second: 'Brown',
 		third: 'Brown',
 		fourth: 'Brown'
 	})
 
-	const [dialog, setDialog] = useState(false)
-	const [content, setDialogContent] = useState(ColorsList)
-	const [activeDialog, setActiveDialog] = useState('')
+	const [dialog, setDialog] = React.useState(false)
+	const [content, setDialogContent] = React.useState(ColorsList)
+	const [activeDialog, setActiveDialog] = React.useState('')
 
-	const [resistor, setResistor] = useState(0)
-	const [tolerance, setTolerance] = useState(0)
+	const [resistor, setResistor] = React.useState(0)
+	const [tolerance, setTolerance] = React.useState(0)
 
-	useEffect(() => {
+	React.useEffect(() => {
 		if (!dialog) {
 			setResistor(Calculator(color))
 			setTolerance(Calculator(color, 'tolerance'))
@@ -53,7 +54,10 @@ export default function App() {
 		setActiveDialog(name)
 	}
 
-	const handleChange = (_e: ChangeEvent<HTMLInputElement>, value: string) => {
+	const handleChange = (
+		_e: React.ChangeEvent<HTMLInputElement>,
+		value: string
+	) => {
 		let newColor: any = color
 
 		newColor[activeDialog] = value
@@ -102,7 +106,7 @@ export default function App() {
 	)
 }
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme: Theme) => ({
 	root: {
 		flexGrow: 1,
 		padding: '48px',
