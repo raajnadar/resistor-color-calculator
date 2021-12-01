@@ -6,9 +6,9 @@
 	"dependencies": {
 		"@material-ui/core": "^4.11.0",
 		"gh-pages": "^2.0.1",
-		"react": "^16.13.1",
-		"react-dom": "^16.13.1",
-		"react-scripts": "^3.4.1"
+		"react": "^17.0.2",
+		"react-dom": "^17.0.2",
+		"react-scripts": "^4.0.3"
 	},
 	"scripts": {
 		"start": "react-scripts start",
@@ -17,11 +17,8 @@
 		"eject": "react-scripts eject",
 		"predeploy": "yarn lint && yarn tsc && yarn build",
 		"deploy": "gh-pages -d build --repo https://github.com/raajnadar/resistor-color-calculator.git",
-		"lint": "eslint --ext=ts,tsx src",
+		"lint": "eslint --ext .ts,.tsx .",
 		"typescript": "yarn tsc"
-	},
-	"eslintConfig": {
-		"extends": "react-app"
 	},
 	"browserslist": [
 		">0.2%",
@@ -30,13 +27,30 @@
 		"not op_mini all"
 	],
 	"devDependencies": {
-		"@testing-library/jest-dom": "^5.1.1",
-		"@testing-library/react": "^9.4.0",
-		"@testing-library/user-event": "^8.1.0",
-		"@types/jest": "^25.1.2",
-		"@types/node": "^14.0.14",
-		"@types/react": "^16.9.41",
-		"@types/react-dom": "^16.9.8",
-		"typescript": "^3.9.6"
+		"@testing-library/jest-dom": "^5.15.1",
+		"@testing-library/react": "^12.1.2",
+		"@testing-library/user-event": "^13.5.0",
+		"@types/jest": "^27.0.3",
+		"@types/node": "^16.11.11",
+		"@types/react": "^17.0.37",
+		"@types/react-dom": "^17.0.11",
+		"typescript": "^4.0.0"
+	},
+	"eslintConfig": {
+		"extends": "react-app",
+		"rules": {
+			"@typescript-eslint/no-use-before-define": "off",
+			"@typescript-eslint/ban-ts-ignore": "off",
+			"@typescript-eslint/no-explicit-any": "off"
+		}
+	},
+	"prettier": {
+		"semi": false,
+		"tabWidth": 2,
+		"singleQuote": true,
+		"useTabs": true,
+		"jsxBracketSameLine": true,
+		"proseWrap": "never",
+		"trailingComma": "none"
 	}
 }

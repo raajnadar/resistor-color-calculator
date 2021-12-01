@@ -2,7 +2,7 @@
   "compilerOptions": {
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
-    "jsx": "preserve",
+    "jsx": "react",
     "lib": [
       "dom",
       "es2017"
@@ -21,14 +21,15 @@
     "forceConsistentCasingInFileNames": true,
     "esModuleInterop": true,
     "resolveJsonModule": true,
-		"isolatedModules": true
-	},
-	"exclude": [
-		"node_modules"
-	],
+    "isolatedModules": true,
+    "noFallthroughCasesInSwitch": true
+  },
+  "exclude": [
+    "node_modules"
+  ],
   "include": [
     "./src/react-app-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-	]
+  ]
 }
