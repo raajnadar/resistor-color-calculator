@@ -1,13 +1,11 @@
-import { render } from 'react-dom'
+import { StrictMode } from 'react'
+import { createRoot } from 'react-dom/client'
 
-import ThemeProvider from '@mui/material/styles/ThemeProvider'
-import createTheme from '@mui/material/styles/createTheme'
-import purple from '@mui/material/colors/purple'
-import indigo from '@mui/material/colors/indigo'
+import { ThemeProvider, createTheme } from '@mui/material/styles'
+import { indigo, purple } from '@mui/material/colors'
 import CssBaseline from '@mui/material/CssBaseline'
 
 import App from './App'
-import * as serviceWorker from './serviceWorker'
 
 const theme = createTheme({
 	palette: {
@@ -27,12 +25,17 @@ const theme = createTheme({
 	}
 })
 
-render(
-	<ThemeProvider theme={theme}>
-		<CssBaseline />
-		<App />
-	</ThemeProvider>,
-	document.getElementById('root')
-)
+const container = document.getElementById('root')
 
-serviceWorker.register()
+if (!container) {
+	throw new Error('Root container #root was not found in the document')
+}
+
+createRoot(container).render(
+	<StrictMode>
+		<ThemeProvider theme={theme}>
+			<CssBaseline />
+			<App />
+		</ThemeProvider>
+	</StrictMode>
+)

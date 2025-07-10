@@ -2,26 +2,24 @@
 	"name": "resistor-color-calculator",
 	"version": "0.1.0",
 	"private": true,
+	"type": "module",
 	"homepage": "https://raajnadar.github.io/resistor-color-calculator/",
 	"dependencies": {
-		"@emotion/react": "^11.10.4",
-		"@emotion/styled": "^11.10.4",
-		"@mui/material": "^5.10.5",
-		"@mui/styles": "^5.10.3",
-		"gh-pages": "^2.0.1",
-		"react": "^18.2.0",
-		"react-dom": "^18.2.0",
-		"react-scripts": "^5.0.1"
+		"@emotion/react": "11.14.0",
+		"@emotion/styled": "11.14.1",
+		"@mui/material": "7.2.0",
+		"react": "19.1.0",
+		"react-dom": "19.1.0"
 	},
 	"scripts": {
-		"start": "react-scripts start",
-		"build": "react-scripts build",
-		"test": "react-scripts test",
-		"eject": "react-scripts eject",
-		"predeploy": "yarn lint && yarn tsc && yarn build",
-		"deploy": "gh-pages -d build --repo https://github.com/raajnadar/resistor-color-calculator.git",
-		"lint": "eslint --ext .ts,.tsx .",
-		"typescript": "yarn tsc"
+		"start": "vite",
+		"build": "vite build",
+		"preview": "vite preview",
+		"predeploy": "npm run lint && npm run tsc && npm run build",
+		"deploy": "gh-pages -d dist --repo https://github.com/raajnadar/resistor-color-calculator.git",
+		"lint": "eslint .",
+		"tsc": "tsc --noEmit",
+		"typescript": "npm run tsc"
 	},
 	"browserslist": [
 		">0.2%",
@@ -30,29 +28,24 @@
 		"not op_mini all"
 	],
 	"devDependencies": {
-		"@testing-library/jest-dom": "^5.15.1",
-		"@testing-library/react": "^12.1.2",
-		"@testing-library/user-event": "^13.5.0",
-		"@types/jest": "^27.0.3",
-		"@types/node": "^18.7.17",
-		"@types/react": "^18.0.20",
-		"@types/react-dom": "^18.0.6",
-		"typescript": "^4.0.0"
-	},
-	"eslintConfig": {
-		"extends": "react-app",
-		"rules": {
-			"@typescript-eslint/no-use-before-define": "off",
-			"@typescript-eslint/ban-ts-ignore": "off",
-			"@typescript-eslint/no-explicit-any": "off"
-		}
+		"@eslint/js": "9.30.0",
+		"@types/react": "19.1.8",
+		"@types/react-dom": "19.1.6",
+		"@vitejs/plugin-react": "4.6.0",
+		"eslint": "9.30.0",
+		"eslint-plugin-react-hooks": "5.2.0",
+		"eslint-plugin-react-refresh": "0.4.20",
+		"gh-pages": "6.3.0",
+		"globals": "16.2.0",
+		"typescript": "5.8.3",
+		"typescript-eslint": "8.35.1",
+		"vite": "7.0.0"
 	},
 	"prettier": {
 		"semi": false,
 		"tabWidth": 2,
 		"singleQuote": true,
 		"useTabs": true,
-		"jsxBracketSameLine": true,
 		"proseWrap": "never",
 		"trailingComma": "none"
 	}

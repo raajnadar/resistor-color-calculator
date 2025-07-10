@@ -19,7 +19,6 @@ export default function ColorSelector(props: Props) {
 	return (
 		<Dialog
 			open={dialog}
-			disableEscapeKeyDown
 			fullWidth={true}
 			maxWidth="sm"
 			aria-labelledby="dialog-title">

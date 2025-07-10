@@ -6,7 +6,7 @@ import Link from '@mui/material/Link'
 
 export default function BugReport() {
 	return (
-		<Grid item xs={12}>
+		<Grid size={12}>
 			<Card>
 				<CardContent>
 					<Typography variant="h5" component="h2" gutterBottom>

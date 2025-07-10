@@ -1,10 +1,8 @@
 import React from 'react'
 
-import makeStyles from '@mui/styles/makeStyles'
-
+import Box from '@mui/material/Box'
 import Grid from '@mui/material/Grid'
 import Typography from '@mui/material/Typography'
-import { Theme } from '@mui/material'
 
 // Import component
 import ColorSelector from './components/ColorSelector'
@@ -21,8 +19,6 @@ import ToleranceList from './list/Tolerance'
 import Calculator from './functions/Calculator'
 
 export default function App() {
-	const classes = useStyles()
-
 	const [color, setColor] = React.useState({
 		first: 'Brown',
 		second: 'Brown',
@@ -34,15 +30,9 @@ export default function App() {
 	const [content, setDialogContent] = React.useState(ColorsList)
 	const [activeDialog, setActiveDialog] = React.useState('')
 
-	const [resistor, setResistor] = React.useState(0)
-	const [tolerance, setTolerance] = React.useState(0)
-
-	React.useEffect(() => {
-		if (!dialog) {
-			setResistor(Calculator(color))
-			setTolerance(Calculator(color, 'tolerance'))
-		}
-	}, [color, dialog])
+	// Derived directly from the selected colors — no effect needed
+	const resistor = Calculator(color)
+	const tolerance = Calculator(color, 'tolerance')
 
 	const buttonClick = (name: string) => {
 		if (name === 'fourth') {
@@ -58,25 +48,18 @@ export default function App() {
 		_e: React.ChangeEvent<HTMLInputElement>,
 		value: string
 	) => {
-		let newColor: any = color
-
-		newColor[activeDialog] = value
-		if (activeDialog === 'first') {
-			setColor(newColor)
-		} else if (activeDialog === 'second') {
-			setColor(newColor)
-		} else if (activeDialog === 'third') {
-			setColor(newColor)
-		} else {
-			setColor(newColor)
-		}
+		setColor((current) => ({ ...current, [activeDialog]: value }))
 		setDialog(false)
 	}
 
 	return (
-		<div className={classes.root}>
+		<Box
+			sx={{
+				flexGrow: 1,
+				padding: { xs: '24px', md: '30px' }
+			}}>
 			<Grid container spacing={2}>
-				<Grid xs={12} item>
+				<Grid size={12}>
 					<Typography variant="h3" component="h1" align="center" gutterBottom>
 						Resistor Color Calculator
 					</Typography>
@@ -102,16 +85,6 @@ export default function App() {
 				content={content}
 				handleChange={handleChange}
 			/>
-		</div>
+		</Box>
 	)
 }
-
-const useStyles = makeStyles((theme: Theme) => ({
-	root: {
-		flexGrow: 1,
-		padding: '30px',
-		[theme.breakpoints.down('sm')]: {
-			padding: '24px'
-		}
-	}
-}))

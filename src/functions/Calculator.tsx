@@ -9,7 +9,7 @@ type Color = {
 }
 
 export default function Calculator(color: Color, type?: string) {
-	let value: number = 0
+	let value: number
 
 	if (type === 'tolerance') {
 		value = ColorIndex(color.fourth, 'tolerance')

@@ -17,25 +17,32 @@ export default function FourBandResistor(props: Props) {
 	const { buttonClick, color, resistor, tolerance } = props
 
 	return (
-		<Grid item xs={12}>
+		<Grid size={12}>
 			<Card>
 				<CardContent>
 					<Typography variant="h5" component="h2" gutterBottom>
 						4 band resistor color
 					</Typography>
-					<Grid m="10px -12px" textAlign="center" container spacing={2}>
-						<Grid item lg={3} sm={6} xs={12}>
+					<Grid
+						sx={{ m: '10px -12px', textAlign: 'center' }}
+						container
+						spacing={2}>
+						<Grid
+							size={{ xs: 12, sm: 6, lg: 3 }}
+							sx={{ display: 'flex', justifyContent: 'center' }}>
 							<Button
 								style={{
 									backgroundColor: color.first,
 									color: color.first === 'White' ? '#000' : '#fff'
 								}}
 								variant="contained"
-								onClick={() => props.buttonClick('first')}>
+								onClick={() => buttonClick('first')}>
 								{color.first}
 							</Button>
 						</Grid>
-						<Grid item lg={3} sm={6} xs={12}>
+						<Grid
+							size={{ xs: 12, sm: 6, lg: 3 }}
+							sx={{ display: 'flex', justifyContent: 'center' }}>
 							<Button
 								style={{
 									backgroundColor: color.second,
@@ -43,10 +50,12 @@ export default function FourBandResistor(props: Props) {
 								}}
 								variant="contained"
 								onClick={() => buttonClick('second')}>
-								{props.color.second}
+								{color.second}
 							</Button>
 						</Grid>
-						<Grid item lg={3} sm={6} xs={12}>
+						<Grid
+							size={{ xs: 12, sm: 6, lg: 3 }}
+							sx={{ display: 'flex', justifyContent: 'center' }}>
 							<Button
 								style={{
 									backgroundColor: color.third,
@@ -57,7 +66,9 @@ export default function FourBandResistor(props: Props) {
 								{color.third}
 							</Button>
 						</Grid>
-						<Grid item lg={3} sm={6} xs={12}>
+						<Grid
+							size={{ xs: 12, sm: 6, lg: 3 }}
+							sx={{ display: 'flex', justifyContent: 'center' }}>
 							<Button
 								style={{
 									backgroundColor: color.fourth,
@@ -69,26 +80,24 @@ export default function FourBandResistor(props: Props) {
 							</Button>
 						</Grid>
 					</Grid>
-					<Typography align="center" id="result">
+					<Typography align="center" component="div" id="result">
 						<Typography
 							component="span"
-							display="inline"
 							variant="h5"
+							sx={{ display: 'inline' }}
 							id="value">
 							{Converter(resistor)}
 						</Typography>
 						<Typography
 							component="span"
-							display="inline"
 							variant="h5"
-							ml={1}
-							mr={1}>
+							sx={{ display: 'inline', mx: 1 }}>
 							Ohms &amp;
 						</Typography>
 						<Typography
 							component="span"
-							display="inline"
 							variant="h5"
+							sx={{ display: 'inline' }}
 							id="tolerance">
 							{tolerance}%
 						</Typography>
