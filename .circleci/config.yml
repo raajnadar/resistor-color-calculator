@@ -1,8 +1,8 @@
-version: 2
+version: 2.1
 
 defaults: &defaults
   docker:
-    - image: circleci/node:16
+    - image: cimg/node:22.11
   working_directory: ~/project
 
 jobs:
@@ -10,15 +10,13 @@ jobs:
     <<: *defaults
     steps:
       - checkout
-      - attach_workspace:
-          at: ~/project
       - restore_cache:
           keys:
-            - v1-dependencies-{{ checksum "yarn.lock" }}
-            - v1-dependencies-
-      - run: yarn install --frozen-lockfile
+            - v2-dependencies-{{ checksum "package-lock.json" }}
+            - v2-dependencies-
+      - run: npm ci
       - save_cache:
-          key: v1-dependencies-{{ checksum "yarn.lock" }}
+          key: v2-dependencies-{{ checksum "package-lock.json" }}
           paths: node_modules
       - persist_to_workspace:
           root: .
@@ -29,19 +27,23 @@ jobs:
     steps:
       - attach_workspace:
           at: ~/project
-      - run: |
-          yarn lint
+      - run: npm run lint
 
   typescript:
     <<: *defaults
     steps:
       - attach_workspace:
           at: ~/project
-      - run: |
-          yarn tsc
+      - run: npm run tsc
+
+  build:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: ~/project
+      - run: npm run build
 
 workflows:
-  version: 2
   build-and-test:
     jobs:
       - install-dependencies
@@ -49,5 +51,8 @@ workflows:
           requires:
             - install-dependencies
       - typescript:
+          requires:
+            - install-dependencies
+      - build:
           requires:
             - install-dependencies
