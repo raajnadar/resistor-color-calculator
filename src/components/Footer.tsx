@@ -6,8 +6,12 @@ import Box from '@mui/material/Box'
 export default function Footer() {
 	return (
 		<Grid size={12}>
-			<Box sx={{ mt: 4 }}>
-				<Typography align="center" variant="body1" component="h6">
+			<Box sx={{ mt: 3, mb: 1 }}>
+				<Typography
+					align="center"
+					variant="body2"
+					component="p"
+					sx={{ color: 'text.secondary' }}>
 					Developed &amp; maintained by
 					<Link
 						href="https://raajnadar.in"

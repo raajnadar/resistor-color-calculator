@@ -12,7 +12,9 @@ export default function BugReport() {
 					<Typography variant="h5" component="h2" gutterBottom>
 						Bug report
 					</Typography>
-					<Typography variant="body1" component="h2" gutterBottom>
+					<Typography
+						variant="body1"
+						sx={{ color: 'text.secondary', mb: 1.5 }}>
 						Nothing in this world is 100% bug free. Found any bug in this
 						project? It will be great if you raise an issue on the{' '}
 						<Link
@@ -23,7 +25,7 @@ export default function BugReport() {
 							GitHub issues here
 						</Link>
 					</Typography>
-					<Typography variant="body1" component="h2" gutterBottom>
+					<Typography variant="body1" sx={{ color: 'text.secondary' }}>
 						If you are interested in improving this project fork this repository
 						and make a pull request, and also read{' '}
 						<Link

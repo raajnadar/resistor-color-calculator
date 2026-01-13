@@ -7,7 +7,8 @@
 			name="viewport"
 			content="width=device-width, initial-scale=1, shrink-to-fit=no"
 		/>
-		<meta name="theme-color" content="#fff" />
+		<meta name="theme-color" content="#0c0d12" media="(prefers-color-scheme: dark)" />
+		<meta name="theme-color" content="#f4f5f9" media="(prefers-color-scheme: light)" />
 		<meta
 			name="description"
 			content="Calculate the value of resistor using the web application developed by Rajendran Nadar. This web page is powered by React JS and designed by Material-UI"
@@ -15,9 +16,24 @@
 		<link rel="manifest" href="/resistor-color-calculator/manifest.json" />
 		<title>Resistor color calculator | Developed by Rajendran Nadar</title>
 		<link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous" />
-		<link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
+		<style>
+			/* Paint the shell before React mounts so there is no light flash in dark mode */
+			:root {
+				color-scheme: light dark;
+				background-color: #f4f5f9;
+			}
+			@media (prefers-color-scheme: dark) {
+				:root {
+					background-color: #0c0d12;
+				}
+			}
+		</style>
 	</head>
-	<body style="background-color: #EEE">
+	<body>
 		<noscript> You need to enable JavaScript to run this app. </noscript>
 		<div id="root"></div>
 		<script type="module" src="/src/index.tsx"></script>
